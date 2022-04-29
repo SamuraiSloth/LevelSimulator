@@ -150,40 +150,40 @@ while specialstatuspoints != 0:
     reply = input("Which status would you like to upgrade?: ")
     reply2 = input("How many status points would you like to use?: ")
     reply2 = int(reply2)
-    if reply == "hp" and int(reply2) <= specialstatuspoints:
+    if str(reply) == "hp" and int(reply2) <= specialstatuspoints:
         hp += int(reply2)
         print("Your hp stat is now " + str(hp))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "strength" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "strength" and int(reply2) <= specialstatuspoints:
         strength += int(reply2)
-        print("Your strength stat is now " + str(strength))
+        print("Your strength stat is now " + zstr(strength))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "defence" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "defence" and int(reply2) <= specialstatuspoints:
         defence += int(reply2)
         print("Your defence stat is now " + str(defence))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "magicalstrength" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "magicalstrength" and int(reply2) <= specialstatuspoints:
         magicalstrength += int(reply2)
         print("Your magicalstrength stat is now " + str(magicalstrength))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "magicaldefence" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "magicaldefence" and int(reply2) <= specialstatuspoints:
         magicaldefence += int(reply2)
         print("Your magicaldefence stat is now " + str(magicaldefence))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "mp" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "mp" and int(reply2) <= specialstatuspoints:
         mp += int(reply2)
         print("Your mp stat is now " + str(mp))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
-    if reply == "speed" and int(reply2) <= specialstatuspoints:
+        print("You now have " + str(specialstatuspoints) + " status points")
+    if str(reply) == "speed" and int(reply2) <= specialstatuspoints:
         speed += int(reply2)
         print("Your speed stat is now " + str(speed))
         specialstatuspoints -= reply2
-        print("You now have " + str(reply2) + " status points")
+        print("You now have " + str(specialstatuspoints) + " status points")
     elif int(reply2) > specialstatuspoints:
         print("You do not have enough status points to do this.")
