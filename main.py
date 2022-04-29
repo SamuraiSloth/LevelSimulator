@@ -1,7 +1,9 @@
 import math
 
 #introduces variables
-level = input("What level do you want to be: ")
+xp = input("How many EXP points do you want?: ")
+xp = float(xp)
+level = (math.floor(xp ** (1./2.25))) + 1
 level = int(level)
 hp = 100
 strength = 20
@@ -26,9 +28,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    hp += (100 * x - y) * x * x
+    hp += (100 * x - y) * x * x * 2
   else:
-    hp += (level - y) * x * x
+    hp += (level - y) * x * x * 2
   i -= 1
 x = 0
 i = level
@@ -41,9 +43,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    strength += math.ceil(((100 * x - y) * x * x) / 5)
+    strength += math.ceil(((100 * x - y) * x * x) / 5 * 2)
   else:
-    strength += math.ceil(((level - y) * x * x) / 5)
+    strength += math.ceil(((level - y) * x * x) / 5 * 2)
   i -= 1
 x = 0
 i = level
@@ -56,9 +58,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    defence += math.ceil(((100 * x - y) * x * x) / 5)
+    defence += math.ceil(((100 * x - y) * x * x) / 5 * 2)
   else:
-    defence += math.ceil(((level - y) * x * x) / 5)
+    defence += math.ceil(((level - y) * x * x) / 5 * 2)
   i -= 1
 x = 0
 i = level
@@ -71,9 +73,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    magicalstrength += math.ceil(((100 * x - y) * x * x) / 5)
+    magicalstrength += math.ceil(((100 * x - y) * x * x) / 5 * 2)
   else:
-    magicalstrength += math.ceil(((level - y) * x * x) / 5)
+    magicalstrength += math.ceil(((level - y) * x * x) / 5 * 2)
   i -= 1
 x = 0
 i = level
@@ -86,9 +88,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    magicaldefence += math.ceil(((100 * x - y) * x * x) / 5)
+    magicaldefence += math.ceil(((100 * x - y) * x * x) / 5 * 2)
   else:
-    magicaldefence += math.ceil(((level - y) * x * x) / 5)
+    magicaldefence += math.ceil(((level - y) * x * x) / 5 * 2)
   i -= 1
 x = 0
 i = level
@@ -101,9 +103,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    mp += math.ceil(((100 * x - y) * x * x) / 5)
+    mp += math.ceil(((100 * x - y) * x * x) / 5 * 2)
   else:
-    mp += math.ceil(((level - y) * x * x) / 5)
+    mp += math.ceil(((level - y) * x * x) / 5 * 2)
   i -= 1
 x = 0
 i = level
@@ -116,9 +118,9 @@ while i != 0:
   else:
     y = 100 * (x - 1)
   if level > (100 * x):
-    speed += math.ceil(((100 * x - y) * x * x) / 10)
+    speed += math.ceil(((100 * x - y) * x * x) / 5)
   else:
-    speed += math.ceil(((level - y) * x * x) / 10)
+    speed += math.ceil(((level - y) * x * x) / 5)
   i -= 1
 x = 0
 i = level
@@ -131,13 +133,14 @@ while i != 0:
  else:
    y = 100 * (x - 1)
  if level > (100 * x):
-   specialstatuspoints += math.ceil(((100 * x - y) * x * x) / 2)
+   specialstatuspoints += math.ceil(((100 * x - y) * x * x))
  else:
-   specialstatuspoints += math.ceil(((level - y) * x * x) / 2)
+   specialstatuspoints += math.ceil(((level - y) * x * x))
  i -= 1
 
 #states stats
 print("Your stats are")
+print("level: " + str(level))
 print("hp: " + str(hp))
 print("strength: " + str(strength))
 print("defence: " + str(defence))
@@ -146,6 +149,8 @@ print("magicaldefence: " + str(magicaldefence))
 print("mp: " + str(mp))
 print("speed: " + str(speed))
 print("You have " + str(specialstatuspoints) + " status points you can use to upgrade any status you have!")
+
+#calculates and prints status points
 while specialstatuspoints != 0:
     reply = input("Which status would you like to upgrade?: ")
     reply2 = input("How many status points would you like to use?: ")
