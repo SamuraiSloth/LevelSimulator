@@ -152,3 +152,23 @@ while specialstatuspoints != 0:
     if reply == "hp" and int(reply2) <= specialstatuspoints:
         hp += int(reply2)
         print("Your hp stat is now " + str(hp))
+    if reply == "strength" and int(reply2) <= specialstatuspoints:
+        strength += int(reply2)
+        print("Your strength stat is now " + str(strength))
+    if reply == "defence" and int(reply2) <= specialstatuspoints:
+        defence += int(reply2)
+        print("Your defence stat is now " + str(defence))
+    if reply == "magicalstrength" and int(reply2) <= specialstatuspoints:
+        magicalstrength += int(reply2)
+        print("Your magicalstrength stat is now " + str(magicalstrength))
+    if reply == "magicaldefence" and int(reply2) <= specialstatuspoints:
+        magicaldefence += int(reply2)
+        print("Your magicaldefence stat is now " + str(magicaldefence))
+    if reply == "mp" and int(reply2) <= specialstatuspoints:
+        mp += int(reply2)
+        print("Your mp stat is now " + str(mp))
+    if reply == "speed" and int(reply2) <= specialstatuspoints:
+        speed += int(reply2)
+        print("Your speed stat is now " + str(speed))
+    elif int(reply2) > specialstatuspoints:
+        print("You do not have enough status points to do this.")
